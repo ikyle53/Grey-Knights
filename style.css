@@ -45,10 +45,16 @@ td {
 
 @media screen and (max-width: 600px) {
     section {
+        display: flex;
+        flex-direction: column;
         width: 90%;
     }
 
     td {
         padding: 5px;
     }
-}
+
+    img {
+        display: block;
+    }
+}   
