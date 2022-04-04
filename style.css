@@ -19,3 +19,7 @@ section {
     border: 5px solid rgb(165, 165, 165);
     color: gold;
 }
+
+td {
+    padding: 10px 20px;
+}

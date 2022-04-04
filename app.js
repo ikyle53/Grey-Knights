@@ -3,6 +3,15 @@
 // Globals *********************************************************************************
 let unitsArray = [];
 const cards = document.getElementById('cards');
+let movement = document.createElement('p');
+let weaponSkill = document.createElement('p');
+let balisticsSkill = document.createElement('p');
+let strength = document.createElement('p');
+let toughness = document.createElement('p');
+let wounds = document.createElement('p');
+let attacks = document.createElement('p');
+let leadership = document.createElement('p');
+let save = document.createElement('p');
 
 // Constructor function *********************************************************************
 function unit(type, names, m, ws, bs, s, t, w, a, ld, sv) {
@@ -15,7 +24,7 @@ function unit(type, names, m, ws, bs, s, t, w, a, ld, sv) {
     this.t = t;
     this.w = w;
     this.a = a;
-    this.ls = ld;
+    this.ld = ld;
     this.sv = sv;
 
     unitsArray.push(this);
@@ -61,8 +70,75 @@ function createCards() {
     for (let i = 0; i < unitsArray.length; i++) {
         let section = document.createElement('section');
         let h2 = document.createElement('h2');
+        let table = document.createElement('table');
+        let thead = document.createElement('thead');
+        let th = document.createElement('th');
+        let tbody = document.createElement('tbody');
+        let tr = document.createElement('tr');
+        let td = document.createElement('td');
+
+        //Table appension
+        //Section
         cards.appendChild(section);
-        section.appendChild(h2);
-        h2.textContent = unitsArray[i].names;
+        //Table
+        section.appendChild(table);
+        //Table Head
+        table.appendChild(thead);
+        thead.appendChild(th);
+        th.textContent = unitsArray[i].names;
+
+        //type
+        let type = document.createElement('th');
+        thead.appendChild(type);
+        type.textContent = `Type: ${unitsArray[i].type}`;
+
+        //Table Body
+        table.appendChild(tbody);
+        tbody.appendChild(tr);
+
+        //movement
+        let movement = document.createElement('td');
+        tr.appendChild(movement);
+        movement.textContent = `Movement: ${unitsArray[i].m}`;
+
+        //weapon skill
+        let weaponSkill = document.createElement('td');
+        tr.appendChild(weaponSkill);
+        weaponSkill.textContent = `WS: ${unitsArray[i].ws}`;
+
+        //ballistic skill
+        let balisticsSkill = document.createElement('td');
+        tr.appendChild(balisticsSkill);
+        balisticsSkill.textContent = `BS: ${unitsArray[i].bs}`;
+
+        //strength
+        let strength = document.createElement('td');
+        tr.appendChild(strength);
+        strength.textContent = `S: ${unitsArray[i].s}`;
+
+        //toughness
+        let toughness = document.createElement('td');
+        tr.appendChild(toughness);
+        toughness.textContent = `T: ${unitsArray[i].t}`;
+
+        //wounds
+        let wounds = document.createElement('td');
+        tr.appendChild(wounds);
+        wounds.textContent = `W: ${unitsArray[i].w}`;
+
+        //attacks
+        let attacks = document.createElement('td');
+        tr.appendChild(attacks);
+        attacks.textContent = `A: ${unitsArray[i].a}`;
+
+        //leadership
+        let leadership = document.createElement('td');
+        tr.appendChild(leadership);
+        leadership.textContent = `L: ${unitsArray[i].ld}`;
+
+        //saves
+        let save = document.createElement('td');
+        tr.appendChild(save);
+        save.textContent = `S: ${unitsArray[i].s}`;
     }
 } createCards();
