@@ -58,8 +58,6 @@ let stormravenGunship = new unit('Flyer', 'Stormraven Gunship', `20-45`, 6, 3, 8
 // Loop function to append html elements *********************************************************
 
 function createCards() {
-    
-    
     for (let i = 0; i < unitsArray.length; i++) {
         let section = document.createElement('section');
         let h2 = document.createElement('h2');
@@ -68,9 +66,3 @@ function createCards() {
         h2.textContent = unitsArray[i].names;
     }
 } createCards();
-        
-//1. Grab <main> by ID (line 5)
-//2. Create loop for my array and count the length (line 64)
-//3. Append sections for each item in the array (line 65)
-//4. Append paragraphs to the sections (line 66)
-//5. Make the paragraph text the value of 'names' in each index (line 67)
