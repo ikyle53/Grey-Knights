@@ -20,6 +20,35 @@ section {
     color: gold;
 }
 
+img {
+    width: 75px;
+    height: 75px;
+}
+
+th {
+    color: rgb(122, 145, 255, 0.9);
+}
+
 td {
     padding: 10px 20px;
+}
+
+@media screen and (max-width: 1408px) {
+    section {
+        width: 60%;
+    }
+
+    td {
+        padding: 7px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        width: 90%;
+    }
+
+    td {
+        padding: 5px;
+    }
 }

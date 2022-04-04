@@ -3,18 +3,9 @@
 // Globals *********************************************************************************
 let unitsArray = [];
 const cards = document.getElementById('cards');
-let movement = document.createElement('p');
-let weaponSkill = document.createElement('p');
-let balisticsSkill = document.createElement('p');
-let strength = document.createElement('p');
-let toughness = document.createElement('p');
-let wounds = document.createElement('p');
-let attacks = document.createElement('p');
-let leadership = document.createElement('p');
-let save = document.createElement('p');
 
 // Constructor function *********************************************************************
-function unit(type, names, m, ws, bs, s, t, w, a, ld, sv) {
+function unit(type, names, m, ws, bs, s, t, w, a, ld, sv, src) {
     this.type = type;
     this.names = names;
     this.m = m;
@@ -26,20 +17,21 @@ function unit(type, names, m, ws, bs, s, t, w, a, ld, sv) {
     this.a = a;
     this.ld = ld;
     this.sv = sv;
-
+    this.src = src;
     unitsArray.push(this);
 }
 
+
 // new units *********************************************************************************
-let kaldoreDreigo = new unit('HQ', 'Kaldore Dreigo', 5, 2, 2, 4, 4, 7, 6, 9, 2);
-let grandMasterVoldus = new unit('HQ', 'Grand Master Voldus', 5, 2, 2, 4, 4, 6, 6, 9, 2);
-let grandMaster = new unit('HQ', 'Grand Master', 5, 2, 2, 4, 4, 6, 6, 9, 2);
-let grandMasterNd = new unit('HQ', 'Grand Master ND', 9, 2, 2, 6, 6, 13, 6, 9, 2);
-let castellanCrowe = new unit('HQ', 'Castellan Crowe', 6, 2, 2, 4, 4, 5, 6, 8, 2);
-let brotherCaptainStern = new unit('HQ', 'Brother Captain Stern', 5, 2, 2, 4, 4, 6, 6, 9, 2);
-let brotherCaptain = new unit('HQ', 'Brother Captain', 5, 2, 2, 4, 4, 6, 5, 9, 2);
-let brotherhoodChampion = new unit('HQ', 'Brotherhood Champion', 6, 2, 2, 4, 4, 4, 5, 8, 2);
-let brotherhoodLibrarian = new unit('HQ', 'Brotherhood Librarian', 5, 3, 3, 4, 4, 5, 4, 9, 2);
+let kaldoreDreigo = new unit('HQ', 'Kaldore Dreigo', 5, 2, 2, 4, 4, 7, 6, 9, 2, 'imgs/kalDreigo.webp');
+let grandMasterVoldus = new unit('HQ', 'Grand Master Voldus', 5, 2, 2, 4, 4, 6, 6, 9, 2, 'imgs/gmVoldus.webp');
+let grandMaster = new unit('HQ', 'Grand Master', 5, 2, 2, 4, 4, 6, 6, 9, 2, 'imgs/grandMaster.jpeg');
+let grandMasterNd = new unit('HQ', 'Grand Master ND', 9, 2, 2, 6, 6, 13, 6, 9, 2, 'imgs/gmNemDread.webp');
+let castellanCrowe = new unit('HQ', 'Castellan Crowe', 6, 2, 2, 4, 4, 5, 6, 8, 2, 'imgs/castCrowe.webp');
+let brotherCaptainStern = new unit('HQ', 'Brother Captain Stern', 5, 2, 2, 4, 4, 6, 6, 9, 2, 'imgs/broCapStern.webp');
+let brotherCaptain = new unit('HQ', 'Brother Captain', 5, 2, 2, 4, 4, 6, 5, 9, 2, 'imgs/broCaptain.webp');
+let brotherhoodChampion = new unit('HQ', 'Brotherhood Champion', 6, 2, 2, 4, 4, 4, 5, 8, 2, 'imgs/broChamp.jpeg');
+let brotherhoodLibrarian = new unit('HQ', 'Brotherhood Librarian', 5, 3, 3, 4, 4, 5, 4, 9, 2, 'imgs/broLibrarian.webp');
 let brotherhoodTechmrine = new unit('HQ', 'Brotherhood Techmarine', 6, 3, 2, 4, 4, 4, 4, 8, 2);
 let brotherhoodChaplain = new unit('HQ', 'Brotherhood Chaplain', 5, 2, 3, 4, 4, 5, 4, 9, 2);
 let brotherhoodTerminatorSquad = new unit('Troop', 'Brotherhood Terminator Squad', 5, 3, 3, 4, 4, 3, 3, 7, 2);
@@ -69,17 +61,22 @@ let stormravenGunship = new unit('Flyer', 'Stormraven Gunship', `20-45`, 6, 3, 8
 function createCards() {
     for (let i = 0; i < unitsArray.length; i++) {
         let section = document.createElement('section');
-        let h2 = document.createElement('h2');
         let table = document.createElement('table');
         let thead = document.createElement('thead');
         let th = document.createElement('th');
         let tbody = document.createElement('tbody');
         let tr = document.createElement('tr');
-        let td = document.createElement('td');
+        let img = document.createElement('img');
+
+        
 
         //Table appension
         //Section
         cards.appendChild(section);
+
+        section.appendChild(img);
+        img.src = unitsArray[i].src;
+
         //Table
         section.appendChild(table);
         //Table Head
