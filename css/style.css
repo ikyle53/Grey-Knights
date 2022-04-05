@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+}
+
+li {
+    padding: 50px;
+    text-decoration: none;
+    font-size: 4em;
+    background-color: rgb(120, 120, 255);
+    color: gold;
+    margin-bottom: 25px;
+}
