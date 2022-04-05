@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: gold;
+}
+
+h2 {
+    color: gold;
+}
+
+section {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: rgb(165, 165, 165);
+    margin: 30px 0px;
+    padding: 10px;
+    color: black;
+    border: 5px solid rgb(122, 145, 255, 0.9);
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        width: 70%;
+    }
+} 
