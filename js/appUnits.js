@@ -22,6 +22,7 @@ function unit(type, names, m, ws, bs, s, t, w, a, ld, sv, src) {
 }
 
 
+
 // new units *********************************************************************************
 let kaldoreDreigo = new unit('HQ', 'Kaldore Dreigo', 5, 2, 2, 4, 4, 7, 6, 9, 2, 'imgs/kalDreigo.webp');
 let grandMasterVoldus = new unit('HQ', 'Grand Master Voldus', 5, 2, 2, 4, 4, 6, 6, 9, 2, 'imgs/gmVoldus.webp');

@@ -10,6 +10,7 @@ let moralePhase = [];
 let anyPhase = [];
 
 let main = document.getElementById('main');
+let hr = document.createElement('hr');
 
 // Constructors *********************************
 function before(name, description, type, cost) {
@@ -28,47 +29,94 @@ function command(name, description, type, cost) {
     commandPhase.push(this);
 }
 
-function movement(name, description) {
+function movement(name, description, type, cost) {
     this.name = name;
     this.description = description;
+    this.type = type;
+    this.cost = cost;
     movementPhase.push(this);
 }
 
-function psychic(name, description) {
+function psychic(name, description, type, cost) {
     this.name = name;
     this.description = description;
+    this.type = type;
+    this.cost = cost;
     psychicPhase.push(this);
 }
 
-function shooting(name, description) {
+function shooting(name, description, type, cost) {
     this.name = name;
     this.description = description;
+    this.type = type;
+    this.cost = cost;
     shootingPhase.push(this);
 }
 
-function charge(name, description) {
+function charge(name, description, type, cost) {
     this.name = name;
     this.description = description;
+    this.type = type;
+    this.cost = cost;
     chargePhase.push(this);
 }
 
-function fight(name, description) {
+function fight(name, description, type, cost) {
     this.name = name;
     this.description = description;
+    this.type = type;
+    this.cost = cost;
     fightPhase.push(this);
 }
 
-function morale(name, description) {
+function morale(name, description, type, cost) {
     this.name = name;
     this.description = description;
+    this.type = type;
+    this.cost = cost;
     moralePhase.push(this);
 }
 
-function any(name, description) {
+function any(name, description, type, cost) {
     this.name = name;
     this.description = description;
+    this.type = type;
+    this.cost = cost;
     anyPhase.push(this);
 }
+
+// Any Phase ************************************************
+let empyricDec = new any('Empyric Declamation', 'Use this strategem at the start of any of your phases. Select on brotherhood chaplain unit from your army that has not recited a litany since the start of your last command phase. That model can recite one litany that has not already been recited by a friendly model since the start of your last command phase. That litany is automatically inspiring (do not roll) and takes effect until the start of your next command phase.', 'Free litany from Chaplain', 2);
+let finestHour = new any('Finest Hour', 'Use this strategem at the start of any phase. Select one grey knights character unit from your army. Until the end of the turn, add 3 inches to the range of that units aura abilities.', 'Extend aura circumfrence', 1);
+let trueArmor = new any('Truesilver Armor', 'Use this strategem in any phase, when a grey knights core infantry unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, an unmodified wound roll of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have. If that unit contains 5 or fewer, this strategem costs 2CP; otherwise, it costs 3CP.', 'Make enemy fail attack on 1-3', 2);
+
+// Any Phase construction zone ******************************
+function buildAny() {
+    let h1 = document.createElement('h1');
+    h1.textContent = `Any Phase`;
+    main.appendChild(h1);
+
+    for (let i = 0; i < anyPhase.length; i++) {
+        let section = document.createElement('section');
+        main.appendChild(section);
+
+        let h2 = document.createElement('h2');
+        h2.textContent = anyPhase[i].name;
+        section.appendChild(h2);
+
+        let type = document.createElement('p');
+        type.textContent = `Quick reference: ${anyPhase[i].type}`;
+        section.appendChild(type);
+
+        let pd = document.createElement('p');
+        pd.textContent = anyPhase[i].description;
+        section.appendChild(pd);
+
+        let cost = document.createElement('p');
+        cost.textContent = `${anyPhase[i].cost} Command point(s)`;
+        section.appendChild(cost);
+    }
+} buildAny();
 
 //Before Battle ********************************************
 let armory = new before('Armory of Titan', 'Use this strategem before the battle, when you are mustering your army, if your warlord has the grey knights keyword. Select one grey knights character model from your army and give them one relic of titan (this must be a relic they could have.) Each relic in your army must be unique, and you cannot use this strategem to give a model two relics. You can only use this strategem once, unless you are playing a strike force battle or an onslaught battle.', 'Add Relic', 1);
@@ -138,3 +186,37 @@ function buildCommandPhase() {
         section.appendChild(cost);
     }
 } buildCommandPhase();
+
+// Movement Phase ************************************************
+let chirurgRez = new movement('Chirurgic Resurrection','Use this strategem at the end of your movement phase. Select one grey knights apothecary unit from your army and then select one friendly grey knights infantry unit that is not at its starting strength and is within 3 inches of that apothecary. One of the selected units destroyed models is returned to its unit with its full wounds remaining.', 'Quick rez', 1);
+
+
+// Movement Phase construction zone ******************************
+function buildMovement() {
+    let h1 = document.createElement('h1');
+    h1.textContent = `Movement Phase`;
+    main.appendChild(h1);
+
+    for (let i = 0; i < movementPhase.length; i++) {
+        let section = document.createElement('section');
+        main.appendChild(section);
+
+        let h2 = document.createElement('h2');
+        h2.textContent = movementPhase[i].name;
+        section.appendChild(h2);
+
+        let type = document.createElement('p');
+        type.textContent = `Quick reference: ${movementPhase[i].type}`;
+        section.appendChild(type);
+
+        let pd = document.createElement('p');
+        pd.textContent = movementPhase[i].description;
+        section.appendChild(pd);
+
+        let cost = document.createElement('p');
+        cost.textContent = `${movementPhase[i].cost} movement point(s)`;
+        section.appendChild(cost);
+    }
+} buildMovement();
+
+

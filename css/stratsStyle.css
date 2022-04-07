@@ -9,6 +9,10 @@ main {
     align-items: center;
 }
 
+hr {
+    width: 100%;
+}
+
 h1 {
     color: gold;
 }
