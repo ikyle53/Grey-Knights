@@ -189,7 +189,11 @@ function buildCommandPhase() {
 
 // Movement Phase ************************************************
 let chirurgRez = new movement('Chirurgic Resurrection','Use this strategem at the end of your movement phase. Select one grey knights apothecary unit from your army and then select one friendly grey knights infantry unit that is not at its starting strength and is within 3 inches of that apothecary. One of the selected units destroyed models is returned to its unit with its full wounds remaining.', 'Quick rez', 1);
-
+let desperateBr = new movement('Desperate Breakout', 'Use this strategem in your movement phase. Select one unit from your army that has not been selected to move this phase and which is in engagement range with at least one enemy unit. Roll one D6 for each model in that unit; for each result of 1, one model in that unit of your choice is destroyed. Assuming that unit was not destroyed, it can not attempt to fall back, and when doing so its models can be moved across enemy models as if they were not there. Any model in that unit that ends its fall back move within engagement range of any enemy model is destroyed. Assuming the unit is not destroyed, it cannot do anything else this turn, even if it has a rule that would allow it to do so after falling back.', 'Move through enemies!', 2);
+let haloedSoul = new movement('Haloed in Soulfire', 'Use this strategem in your movement phase, when a grey knights core unit from yuor army is set up on the battlefield using the teleport strike ability. Until the start of your next turn, each time as attack is made agasint that unit, subtract 1 from that attacks hit roll.', '-1 to hit vs teleport strike unit', 1);
+let teleportShunt = new movement('Teleportation shunt', 'Use this strategem in your movement phase when a grey knights teleports unit from your army is selected to make a normal move. Instead of making a normal move with that unit, remove it from the battlefield and then set it back up on the battlefield, anywhere that is more than 9 inches away from any enemy models. A unit can only be selected for this strategem once per battle.', 'Teleport any unit on movement', 2);
+let fightOnMove = new movement('Fight on the Move', 'Use this strategem in your movement phase, when a grey knights teleporter unit from your army falls back. Until the end of the turn, that unit is still eligible to shoot and charge, even though it fell back.', 'After fall back, shoot or charge', 1);
+let steelyAdv = new movement('Steely Advance', 'Use this strategem in your movement phase when a grey knights infantry unit from your army makes a normal move. Until the end of the turn, that unit is considered to have remained stationary.', 'Remained stationary even if moved', 2);
 
 // Movement Phase construction zone ******************************
 function buildMovement() {
@@ -214,7 +218,7 @@ function buildMovement() {
         section.appendChild(pd);
 
         let cost = document.createElement('p');
-        cost.textContent = `${movementPhase[i].cost} movement point(s)`;
+        cost.textContent = `${movementPhase[i].cost} Command point(s)`;
         section.appendChild(cost);
     }
 } buildMovement();
