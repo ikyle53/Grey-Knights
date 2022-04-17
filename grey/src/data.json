@@ -1,0 +1,50 @@
+[
+    {
+        "_id": 1,
+        "name": "Empyric Declamation",
+        "strat": "Use this strategem at the start of any of your phases. Select on brotherhood chaplain unit from your army that has not recited a litany since the start of your last command phase. That model can recite one litany that has not already been recited by a friendly model since the start of your last command phase. That litany is automatically inspiring (do not roll) and takes effect until the start of your next command phase.",
+        "quickRef": "Free litany from Chaplain",
+        "costs": 2,
+        "phase": "Any"
+    },
+    {
+        "_id": 2,
+        "name": "Finest Hour",
+        "strat": "Use this strategem at the start of any phase. Select one grey knights character unit from your army. Until the end of the turn, add 3 inches to the range of that units aura abilities.",
+        "quickRef":  "Extend aura circumfrence",
+        "costs": 1,
+        "phase": "Any"  
+    },
+    {
+        "_id": 3,
+        "name": "Truesilver Armor",
+        "strat": "Use this strategem in any phase, when a grey knights core infantry unit from your army is selected as the target of an attack. Until the end of the phase, each time an attack is made against that unit, an unmodified wound roll of 1-3 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have. If that unit contains 5 or fewer, this strategem costs 2CP; otherwise, it costs 3CP.",
+        "quickRef": "Make enemy fail attack on 1-3",
+        "costs": 2,
+        "phase": "Any"
+    },
+    {
+        "_id": 4,
+        "name": "Armory of Titan",
+        "strat": "Use this strategem before the battle, when you are mustering your army, if your warlord has the grey knights keyword. Select one grey knights character model from your army and give them one relic of titan (this must be a relic they could have.) Each relic in your army must be unique, and you cannot use this strategem to give a model two relics. You can only use this strategem once, unless you are playing a strike force battle or an onslaught battle.",
+        "quickRef": "Add Relic",
+        "costs": 1,
+        "phase": "Before Battle"
+    },
+    {
+        "_id": 5,
+        "name": "Exemplar of the Silvered Host", 
+        "strat": "Use this strategem after nominating a grey knights character model that is not a named character to be your warlord. Gnerate one additional warlord trait for them; this must be from the grey knights warlord trats table. Each warlord trait in your army must be unique. You can only use this strategem once.",
+        "quickRef": "Add warlord trait",
+        "costs": 1,
+        "phase": "Before Battle"
+    },
+    {
+        "_id": 6,
+        "name": "Shield of Humanity",
+        "strat": "Use this strategem before the battle, when you are mustering your army, if your warlord has the grey knights keyword. Select one grey knights character from your army and determine one warlord trait for that model; that model is only regarded as your warlord for the purposes of that warlord trait. Each warlord trait in your army must be unique, and you cannot use this strategem to give a model two warlord traits. You can only use this strategem once.",
+        "quickRef": "Re-pick warlord trait",
+        "costs": 1,
+        "phase": "Before Battle"
+    }
+]
