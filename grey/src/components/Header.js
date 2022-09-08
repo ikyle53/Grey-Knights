@@ -5,7 +5,7 @@ class Header extends React.Component {
         return(
             <>
                 <header>
-                    <h1>Grey Knights Helper</h1>
+                    <h1 style={{textAlign:'center'}}>GK Strategems</h1>
                 </header>
             </>
         )
