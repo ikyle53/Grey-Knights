@@ -5,7 +5,7 @@ class Footer extends React.Component {
         return(
             <>
                 <footer>
-                    <p>Author: Kyle Honaker</p>
+                    <p style={{textAlign: "center", margin: "30 0"}}>Author: Kyle Honaker</p>
                 </footer>
             </>
         )

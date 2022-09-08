@@ -9,8 +9,7 @@ let fightPhase = [];
 let moralePhase = [];
 let anyPhase = [];
 
-let main = document.getElementById('main');
-let hr = document.createElement('hr');
+let main = document.getElementById('main'); 
 
 // Constructors *********************************
 function before(name, description, type, cost) {
@@ -156,7 +155,7 @@ function buildBeforeBattle() {
 // Command Phase ************************************************
 let shadowUndying = new command('Shadow of Undying Legends', 'Use this strategem in your command phase. Select one grey knights dreadnought model from your army. Until the start of your next command phase, that model gains either the Rites of Battle ability or the Tactical Precision ability. -Rites of Battle(Aura): While a friendly grey knights core unit is wihtin 6inches of this model, each time a model in that unit makes an attack, re-roll a hit roll of 1. -Tactical Precicion(Aura): While a friendly grey knights core unit is within 6inches of this model, each time a model in that unit makes an attack, re-roll a wound roll of 1.', 'Give dreadnought aura', 1);
 let purityMachine = new command('Purity of the Machine Spirit', 'Use this strategem in your command phase. Select one grey knights machine spirit model from your army. Until the start of the next command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use.', 'Give full wounds to vehicles to determine characteristics', 2);
-let masterWords = new command('Masters of the Word', 'Use this strategem in your command phase. Select one wardmakers character unit from your army. Select one psychich power from the Dominus discipline that model does not know to replace one of the psychic powers that it does.', 'Re-pick psychic power', 1);
+let masterWords = new command('Masters of the Word', 'Use this strategem in your command phase. Select one wardmakers character unit from your army. Select one psychic power from the Dominus discipline that model does not know to replace one of the psychic powers that it does.', 'Re-pick psychic power', 1);
 
 
 // Command Phase construction zone ******************************
@@ -223,4 +222,97 @@ function buildMovement() {
     }
 } buildMovement();
 
+// Psychic Phase ************************************************
+let psycLocus = new psychic('Psychic Locus', 'Use this strategem at the start of your psychic phase. Select one brotherhood captain model from your army. Until the end of the phse, that model gains the following ability: Psychic Locus (Aura): While a friendly brotherhood psyker unit is within 6 inches of this model, add 1 to the psychic tests taken for that unit.', '6 inch add 1 to psych test', 2);
+let mentFocus = new psychic('Mental Focus', 'Use this strategem in your psychic phase. Select one grey knight psyker unit from your army. Until the end of the phase, that unit can attempt to manifest one more psychic power than normal.', 'Manifest a second psychic power', 1);
 
+// Psychic Phase construction zone ******************************
+function buildPsychic() {
+    let h1 = document.createElement('h1');
+    h1.textContent = `Psychic Phase`;
+    main.appendChild(h1);
+    
+    for (let i = 0; i < psychicPhase.length; i++) {
+        let section = document.createElement('section');
+        main.appendChild(section);
+        
+        let h2 = document.createElement('h2');
+        h2.textContent = psychicPhase[i].name;
+        section.appendChild(h2);
+
+        let type = document.createElement('p');
+        type.textContent = `Quick reference: ${psychicPhase[i].type}`;
+        section.appendChild(type);
+
+        let pd = document.createElement('p');
+        pd.textContent = psychicPhase[i].description;
+        section.appendChild(pd);
+
+        let cost = document.createElement('p');
+        cost.textContent = `${psychicPhase[i].cost} Command point(s)`;
+        section.appendChild(cost);
+    }
+} buildPsychic();
+
+// Shooting Phase ************************************************
+let sancKZ = new shooting('Sanctified Kill Zone', 'Use this strategem in your shooting phase, when a purgation squad unit from your arrmy is selected to shoot. Until the end of the phase, each time a ranged attakc made by a model in that unit targets an enemy unit within half range, add 1 to that attacks wound role.', 'Add 1 to wound roll at half range: Purgation Squad.', 2);
+let psyboAmm = new shooting('Psybolt Ammunition', 'Use this strategem in your shooting phase, when a grey knight unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes a ranged attack with a bolt weapon: * An unmodified hit roll of 6 automatically wounds the target. * Improve the AP characteristic of that attack by 1. If this unit has 6 or more models, this strategem costs 2CP, otherwise it costs 1 CP.', 'Auto wound on 6, add 1 to AP', 1);
+
+// Shooting Phase construction zone ******************************
+function buildShoot() {
+    let h1 = document.createElement('h1');
+    h1.textContent = `Shooting Phase`;
+    main.appendChild(h1);
+    
+    for (let i = 0; i < shootingPhase.length; i++) {
+        let section = document.createElement('section');
+        main.appendChild(section);
+        
+        let h2 = document.createElement('h2');
+        h2.textContent = shootingPhase[i].name;
+        section.appendChild(h2);
+        
+        let type = document.createElement('p');
+        type.textContent = `Quick reference: ${shootingPhase[i].type}`;
+        section.appendChild(type);
+
+        let pd = document.createElement('p');
+        pd.textContent = shootingPhase[i].description;
+        section.appendChild(pd);
+
+        let cost = document.createElement('p');
+        cost.textContent = `${shootingPhase[i].cost} Command point(s)`;
+        section.appendChild(cost);
+    }
+} buildShoot();
+
+// Charge Phase ************************************************
+let radStrike = new charge('Radiant Strike', 'Use this strategem in your charge phase, when a blades of victory core infantry unit from your army finishes a charge move. Select one enemy unit within engagement range of that blase of victory unit and roll one D6 for each model in that blades of victory unit that is within engagement range of that enemy unit. For each dice result that equals to or exceeds that enemy units toughness')
+
+// Shooting Phase construction zone ******************************
+function buildCharge() {
+    let h1 = document.createElement('h1');
+    h1.textContent = `Charge Phase`;
+    main.appendChild(h1);
+    
+    for (let i = 0; i < chargePhase.length; i++) {
+        let section = document.createElement('section');
+        main.appendChild(section);
+        
+        let h2 = document.createElement('h2');
+        h2.textContent = chargePhase[i].name;
+        section.appendChild(h2);
+        
+        let type = document.createElement('p');
+        type.textContent = `Quick reference: ${chargePhase[i].type}`;
+        section.appendChild(type);
+
+        let pd = document.createElement('p');
+        pd.textContent = chargePhase[i].description;
+        section.appendChild(pd);
+
+        let cost = document.createElement('p');
+        cost.textContent = `${chargePhase[i].cost} Command point(s)`;
+        section.appendChild(cost);
+    }
+} buildCharge();

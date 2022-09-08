@@ -46,5 +46,173 @@
         "quickRef": "Re-pick warlord trait",
         "costs": 1,
         "phase": "Before Battle"
+    },
+    {
+        "_id": 7,
+        "name": "Endowment in Extremis",
+        "strat": "Use this strategem before the battle. Select one Grey Knights model from your army that has one of the following in their profile: Justicar, Paragon, Knight of the Flame. That model can have one of the following relics of Titan, even though they are not a character: Domina Liber Daemonica; Sanctic Shard; Augmurium Scrolls; Stave of Supremecy. All of the relics your army includes must be different and be given to different models.",
+        "quickRef": "Add relic to model",
+        "costs": 1,
+        "phase": "Before Battle"
+    },
+    {
+        "_id": 8,
+        "name": "Shadow of Undying Legends",
+        "strat": "Use this strategem in your command phase. Select one grey knights dreadnought model from your army. Until the start of your next command phase, that model gains either the Rites of Battle ability or the Tactical Precision ability. -Rites of Battle(Aura): While a friendly grey knights core unit is wihtin 6inches of this model, each time a model in that unit makes an attack, re-roll a hit roll of 1. -Tactical Precicion(Aura): While a friendly grey knights core unit is within 6inches of this model, each time a model in that unit makes an attack, re-roll a wound roll of 1.",
+        "quickRef": "Give dreadnought aura",
+        "costs": 1,
+        "phase": "Command Phase"
+    },
+    {
+        "_id": 9,
+        "name": "Purity of the Machine Spirit",
+        "strat": "Use this strategem in your command phase. Select one grey knights machine spirit model from your army. Until the start of the next command phase, that model is considered to have its full wounds remaining for the purposes of determining what characteristics on its profile to use.",
+        "quickRef": "Give full wounds to vehicles to determine characteristics",
+        "costs": 2,
+        "phase": "Command Phase"
+    },
+    {
+        "_id": 10,
+        "name": "Masters of the Word",
+        "strat": "Use this strategem in your command phase. Select one wardmakers character unit from your army. Select one psychic power from the Dominus discipline that model does not know to replace one of the psychic powers that it does.",
+        "quickRef": "Re-pick psychic power",
+        "costs": 1,
+        "phase": "Command Phase"
+    },
+    {
+        "_id": 11,
+        "name": "Chirurgic Resurrection",
+        "start": "Use this strategem at the end of your movement phase. Select one grey knights apothecary unit from your army and then select one friendly grey knights infantry unit that is not at its starting strength and is within 3 inches of that apothecary. One of the selected units destroyed models is returned to its unit with its full wounds remaining.",
+        "quickRef": "Quick rez",
+        "costs": 1,
+        "phase":"Movement Phase"
+    },
+    {
+        "_id": 12,
+        "name": "Desperate Breakout",
+        "strat": "Use this strategem in your movement phase. Select one unit from your army that has not been selected to move this phase and which is in engagement range with at least one enemy unit. Roll one D6 for each model in that unit; for each result of 1, one model in that unit of your choice is destroyed. Assuming that unit was not destroyed, it can not attempt to fall back, and when doing so its models can be moved across enemy models as if they were not there. Any model in that unit that ends its fall back move within engagement range of any enemy model is destroyed. Assuming the unit is not destroyed, it cannot do anything else this turn, even if it has a rule that would allow it to do so after falling back.",
+        "quickRef": "Move through enemies!",
+        "costs": 2,
+        "phase":"Movement Phase"
+    },
+    {
+        "_id": 13,
+        "name": "Haloed in Soulfire",
+        "strat": "Use this strategem in your movement phase, when a grey knights core unit from yuor army is set up on the battlefield using the teleport strike ability. Until the start of your next turn, each time as attack is made agasint that unit, subtract 1 from that attacks hit roll.",
+        "quickRef": "-1 to hit vs teleport strike",
+        "costs": 1,
+        "phase":"Movement Phase"
+    },
+    {
+        "_id": 14,
+        "name": "Teleportation shunt",
+        "strat": "Use this strategem in your movement phase when a grey knights teleports unit from your army is selected to make a normal move. Instead of making a normal move with that unit, remove it from the battlefield and then set it back up on the battlefield, anywhere that is more than 9 inches away from any enemy models. A unit can only be selected for this strategem once per battle.",
+        "quickRef": "Teleport any unit on movement",
+        "costs": 2,
+        "phase": "Movement Phase"
+    },
+    {
+        "_id": 15,
+        "name": "Fight on the Move",
+        "strat": "Use this strategem in your movement phase, when a grey knights teleporter unit from your army falls back. Until the end of the turn, that unit is still eligible to shoot and charge, even though it fell back.",
+        "quickRef": "After fall back, shoot or charge",
+        "costs": 1,
+        "phase": "Movement Phase"
+    },
+    {
+        "_id": 16,
+        "name": "Steely Advance",
+        "strat": "Use this strategem in your movement phase when a grey knights infantry unit from your army makes a normal move. Until the end of the turn, that unit is considered to have remained stationary.",
+        "quickRef": "Remained stationary even if moved",
+        "costs": 2,
+        "phase": "Movement Phase"
+    },
+    {
+        "_id": 16,
+        "name": "Psychic Locus",
+        "strat": "Use this strategem at the start of your psychic phase. Select one brotherhood captain model from your army. Until the end of the phse, that model gains the following ability: Psychic Locus (Aura): While a friendly brotherhood psyker unit is within 6 inches of this model, add 1 to the psychic tests taken for that unit.",
+        "quickRef": "6 inch aura- add 1 to psych tests",
+        "costs": 2,
+        "phase": "Psychic Phase"
+    },
+    {
+        "_id": 17,
+        "name": "Mental Focus",
+        "strat": "Use this strategem in your psychic phase. Select one grey knight psyker unit from your army. Until the end of the phase, that unit can attempt to manifest one more psychic power than normal.",
+        "quickRef": "Manifest a second psychic power",
+        "costs": 1,
+        "phase": "Psychic Phase"
+    },
+    {
+        "_id": 18,
+        "name": "Sanctified Kill Zone",
+        "strat": "Use this strategem in your shooting phase, when a purgation squad unit from your arrmy is selected to shoot. Until the end of the phase, each time a ranged attakc made by a model in that unit targets an enemy unit within half range, add 1 to that attacks wound role.",
+        "quickRef": "Add 1 to wound roll at half range: Purgation Squad.",
+        "costs": 2,
+        "phase": "Shooting Phase"
+    },
+    {
+        "_id": 19,
+        "name": "Psybolt Ammunition",
+        "strat": "Use this strategem in your shooting phase, when a grey knight unit from your army is selected to shoot. Until the end of the phase, each time a model in that unit makes a ranged attack with a bolt weapon: * An unmodified hit roll of 6 automatically wounds the target. * Improve the AP characteristic of that attack by 1. If this unit has 6 or more models, this strategem costs 2CP, otherwise it costs 1 CP.",
+        "quickRef": "Auto wound on 6, add 1 to AP",
+        "costs": 1,
+        "phase": "Shooting Phase"
+    },
+    {
+        "_id": 20,
+        "name": "Radiant Strike",
+        "strat": "Use this strategem in your charge phase, when a blades of victory core infantry unit from your army finishes a charge move. Select one enemy unit within engagement range of that blades of victory unit and roll one D6 for each model in that blades of victory unit that is within engagement range of that enemy unit. For each dice result that equals to or exceeds that enemy units toughness characteristic, it suffers 1 mortal wound.",
+        "quickRef": "Blades of Victory only- Engagement range- D6 += toughness, sufferes 1 mortal wound",
+        "costs": 1,
+        "phase": "Charge Phase"
+    },
+    {
+        "_id": 21,
+        "name": "Thunderous Stride",
+        "strat": "Use this strategem in your charge phase, when a Dreaknight model from your army finishes a charge move. Select one enemy unit within Engagement Range of that model, and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
+        "quickRef": "D3-3 mortal wounds after dreadknight charge.",
+        "costs": 1,
+        "phase": "Charge Phase"
+    },
+    {
+        "_id": 22,
+        "name": "Counter-Offensice",
+        "strat": "Use this strategem after an enemy unit has fought in this turn. Select one of your own eligible units and fight with it next turn.",
+        "quickRef": "Fight after an enemy fights",
+        "costs": 2,
+        "phase": "Fight Phase"
+    },
+    {
+        "_id": 23,
+        "name": "Final Justice",
+        "strat": "Use this strat in the fight phase, when a grey knights character model (excluding Castellan Crowe) from your army that has not already been selected to fight this phase is destroyed. Do not remove that model from play- it can fight after the attacking model's unit has finished making attacks. After resolving the destroyed model's attacks, it is then removed.",
+        "quickRef": "Character fights back after death",
+        "costs": 2,
+        "phase": "Fight Phase"
+    },
+    {
+        "_id": 24,
+        "name": "The Steel Heart",
+        "strat": "Use this strat in your fight phase, when a grey knights terminator unit from your army is selected to fight. Until the end of the phase, each time a model in that unit makes a melee attack, add 1 to that attack's hit roll.",
+        "quickRef": "+1 to hit during fight phase.",
+        "costs": 1,
+        "phase": "Fight Phase"
+    },
+    {
+        "_id": 25,
+        "name": "Psyk-Out-Grenade",
+        "strat": "Use this strat in your shooting phase, when a grey knights psyk-out-grenades unit is selected to shoot. If that unit is not within engagement range of any enemy units, roll one D6: on a 2+, the closest enemy Psyker unit that is within 6\" of and visible to your unit suffers Perils of the Warp.",
+        "quickRef": "Deal mortal wounds to psyker unit",
+        "costs": 1,
+        "phase":"Shooting Phase"
+    },
+    {
+        "_id": 26,
+        "name": "Cut Them Down",
+        "strat": "Use this strat when an enemy unit falls back, before any models in that unit are moved. Roll one D6 for each model from your army that is within engagement range of that enemy unit; for each result of 6, that enemy unit suffers 1 mortal wound.",
+        "quickRef": "Deal mortal wounds to enemy unit falling back",
+        "costs": 1,
+        "phase": "Enemy Falling Back"
     }
 ]
